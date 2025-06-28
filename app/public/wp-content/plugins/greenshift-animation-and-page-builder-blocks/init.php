@@ -148,6 +148,14 @@ function gspb_greenShift_register_scripts_blocks(){
 	);
 
 	wp_register_script(
+		'gspb-canvas-unicorn',
+		GREENSHIFT_DIR_URL . 'libs/canvas/unicorn.js',
+		array(),
+		'1.0',
+		true
+	);
+
+	wp_register_script(
 		'jslazyload',
 		GREENSHIFT_DIR_URL . 'libs/lazyloadjs/lazyload-scripts.min.js',
 		array(),
@@ -227,7 +235,7 @@ function gspb_greenShift_register_scripts_blocks(){
 		'gs-swiper-init',
 		GREENSHIFT_DIR_URL . 'libs/swiper/init.js',
 		array(),
-		'8.9.9.5',
+		'8.9.9.6',
 		true
 	);
 	wp_localize_script(

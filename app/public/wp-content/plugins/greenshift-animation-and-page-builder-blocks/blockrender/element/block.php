@@ -390,7 +390,7 @@ class Element
 				}
 			}
 		}
-		if(!empty($block['attrs']['type']) && ($block['attrs']['type'] == 'rive' || $block['attrs']['type'] == 'spline' || $block['attrs']['type'] == 'lottie')){
+		if(!empty($block['attrs']['type']) && ($block['attrs']['type'] == 'rive' || $block['attrs']['type'] == 'spline' || $block['attrs']['type'] == 'lottie' || $block['attrs']['type'] == 'unicorn')){
 
 			if(!empty($block['attrs']['customCanvasControllers'])){
 				$p = new \WP_HTML_Tag_Processor( $html );
@@ -413,6 +413,9 @@ class Element
 			}
 			if($block['attrs']['type'] == 'rive'){
 				wp_enqueue_script('gspb-canvas-rive');
+			}
+			if($block['attrs']['type'] == 'unicorn'){
+				wp_enqueue_script('gspb-canvas-unicorn');
 			}
 		}
 

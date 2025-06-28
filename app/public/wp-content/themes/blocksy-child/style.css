@@ -54,7 +54,7 @@ Text Domain: blocksy-child
 .quick-tags a {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  background-color: #50ADC9;
+  background-color: #50adc9;
   font-weight: bold;
   color: white;
   padding: 6px 14px;
@@ -82,3 +82,123 @@ Text Domain: blocksy-child
 .ct-footer-copyright p {
   line-height: 1.4;
 }
+
+.szak-title{
+  font-size: 16px;
+  border-radius: 40px;
+  padding: 8px;
+  transition-duration: 300ms;
+}
+
+
+/*kereső*/
+.szak-kereso-form {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 12px 170px 12px 15px; /* helyet hagyunk a jobb oldali elemeknek */
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+
+.filter-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.filter-wrapper select {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  border-radius: 20px;
+  height: 36px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition-duration: 300ms;
+  width: auto;
+  margin: auto !important;
+}
+
+.filter-wrapper select:hover {
+  background-color: #50adc918;
+}
+
+.filter-wrapper button {
+  all: unset;
+  font-size: 0.9rem;
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: white;
+  height: 25px;
+  background-color: #50adc9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  transition-duration: 300ms;
+}
+
+.filter-wrapper button:hover {
+  background-color: #242943;
+}
+
+@media (max-width: 600px) {
+  .filter-wrapper {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-container input[type="text"] {
+    padding-right: 15px;
+  }  
+}
+
+.autocomplete-suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #eee;
+}
+
+.filter-wrapper select.active {
+  background-color: #50adc9;
+  color: white;
+  font-weight: bold;
+}
+
